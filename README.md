@@ -1,5 +1,8 @@
 # SpacexProgramme
 
+The project helps list and browse launches fetched from spaceX data api. It is built using Node version 12.19.0 and Angular-cli 10.2.0
+The app is made responsive using css grid and media queries with a lighthouse accessibility score of 100.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
 ## Development server
