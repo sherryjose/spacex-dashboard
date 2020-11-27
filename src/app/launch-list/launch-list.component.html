@@ -1,0 +1,21 @@
+<span *ngIf="launchList" class="d-grid column">
+    <span *ngFor="let launchItem of launchList" class="launch-item-card">
+        <div class="center"><img src="{{launchItem.links.mission_patch_small}}" alt="space-ship"></div>
+        <h4>{{launchItem.mission_name}} #{{launchItem.flight_number}}</h4>
+        <div id="mission" class="list-item">
+            <label>Mission Ids:</label>
+            <ul>
+                <li *ngFor="let id of launchItem.mission_id">{{id}}</li>
+            </ul>
+        </div>
+        <div class="list-item">
+            <label>Launch Year: </label>{{launchItem.launch_year}}
+        </div>
+        <div class="list-item">
+            <label>Successful Launch: </label>{{launchItem.launch_success}}
+        </div>
+        <div class="list-item">
+            <label>Successful Landing: </label>{{launchItem.rocket.first_stage?.cores[0].land_success}}
+        </div>
+    </span>
+</span>

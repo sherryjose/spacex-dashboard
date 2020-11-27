@@ -1,0 +1,5 @@
+<div class="container">
+    <app-launch-filter class="filter-wrapper" [selectedYear]="appliedYear" [isLaunchSuccess]="isLaunchSuccess"
+        [isLandSuccess]="isLandSuccess" (filterChange)="applyFilters($event)"></app-launch-filter>
+    <app-launch-list class="launch-wrapper" [launchList]="launchList"></app-launch-list>
+</div>

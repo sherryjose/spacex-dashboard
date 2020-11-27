@@ -1,0 +1,86 @@
+// /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #f2f2f2;
+    font-family: arial, sans-serif;
+}
+
+.wrapper {
+    max-width: 1440px;
+    padding: 0px 0.3rem;
+    margin: 0 auto;
+    min-width: fit-content;
+
+    header {
+        padding: 0.4rem;
+    }
+
+    footer {
+        padding: .3rem;
+        font-size: 1.2rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    ul {
+        margin: 0;
+    }
+
+    label {
+        color: rgb(0, 0, 0);
+        font-weight: 600;
+        margin-right: 0.2rem;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        // min-height: calc(100vh - 72.24px);
+
+        /* mobile layout */
+        @media only screen and (max-width: 700px) {
+
+            .filter-wrapper,
+            .launch-wrapper {
+                grid-column: span 12;
+            }
+        }
+
+        /* tablet layout */
+        @media only screen and (min-width: 701px) and (max-width: 1024px) {
+            .filter-wrapper {
+                grid-column: span 4;
+
+            }
+
+            .launch-wrapper {
+                grid-column: span 8;
+            }
+        }
+
+        /* desktop layout */
+        @media only screen and (min-width: 1025px) {
+            .filter-wrapper {
+                grid-column: span 2;
+            }
+
+            .launch-wrapper {
+                grid-column: span 10;
+            }
+        }
+
+        .d-grid {
+            display: grid;
+        }
+
+    }
+}
